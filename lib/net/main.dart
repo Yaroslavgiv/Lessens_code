@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter JSON Demo',
       home: MyHomePage(),
     );
@@ -35,7 +36,9 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 208, 138, 220),
       appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 111, 12, 136),
         title: const Text('Manual JSON Serialization'),
         centerTitle: true,
       ),

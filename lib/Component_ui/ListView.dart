@@ -25,7 +25,7 @@ class BodyListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _myListView();
+    return const Text('data');
   }
 }
 
@@ -58,22 +58,22 @@ class BodyListView extends StatelessWidget {
 
 // dinamic ListView
 
-Widget _myListView() {
-  final List<ListItem> items = List<ListItem>.generate(
-      10000,
-      (i) => i % 6 == 0
-          ? HeadingItem('Heading $i')
-          : MessageItem('Sender $i', 'Message body $i'));
+// Widget _myListView() {
+//   final List<ListItem> items = List<ListItem>.generate(
+//       10000,
+//       (i) => i % 6 == 0
+//           ? HeadingItem('Heading $i')
+//           : MessageItem('Sender $i', 'Message body $i'));
 
-  return ListView.builder(
-      itemCount: items.length,
-      itemBuilder: (context, index) {
-        final item = items[index];
+//   return ListView.builder(
+//       itemCount: items.length,
+//       itemBuilder: (context, index) {
+//         final item = items[index];
 
-        if (item is MessageItem) {
-          return ListTile(
-            title: Text(item.heading, style: Theme.of(context).textTheme.headline5,),
-          );
-        }
-      });
-}
+//         if (item is MessageItem) {
+//           return ListTile(
+//             title: Text(item.heading, style: Theme.of(context).textTheme.headline5,),
+//           );
+//         }
+//       });
+// }
